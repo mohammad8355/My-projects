@@ -1,0 +1,381 @@
+@import url(myfont/futur/Futura\ Heavy\ font.ttf);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'futur';
+}
+@font-face{
+    font-family:'futur';
+    src: url('myfont/futur/Futura\ Heavy\ font.ttf');
+}
+
+body{
+    background-color: aliceblue;
+}
+header{
+    position: relative;
+    width: 100%;
+    height:40em;
+    background-image: url(images/photomontage.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.opacity{
+    position: absolute;
+    width: 100%;
+    height: 40em;
+    background-color: #000;
+    opacity: 0.5;
+    z-index: 0;
+}
+header span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    font-size: 3vw;
+    font-weight: 50;
+}
+header span::first-letter{
+    color:  rgb(255, 0, 119);
+}
+nav{
+    width: 100%;
+    display: flex;
+      justify-content:flex-end;
+    position: fixed;
+    z-index: 200;
+}
+header nav ul{
+list-style: none;
+display: flex;
+justify-content: center;
+flex-direction: row;
+flex-wrap: wrap;
+gap: 1vw;
+margin-right: .5vw;
+background-attachment: fixed;
+z-index: 200;
+}
+ul li{
+    color: #fff;
+    font-size:2vw ;
+    text-align: center;
+    z-index: 200;
+}
+ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+/* li:hover{
+    background-color: #fff;
+} */
+a:hover{
+    color:  rgb(255, 0, 119);
+    cursor: pointer;
+    text-shadow: 0 0 5px  rgb(255, 0, 119);
+}
+header h1{
+    position: absolute;
+    color: #fff;
+    font-size:3vw ;
+    top: 50%;
+    left: 35%;
+}
+header p{
+    position: absolute;
+    top: 60%;
+    left: 25%;
+    color: #fff;
+    font-size:2vw ;
+    width: 50%;
+    overflow-wrap: break-word;
+}
+.work{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 1vw;
+    min-width: 100%;
+    min-height: 50em;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+:root{
+    --bg-1:url(images/watch.jpg);
+    --bg-2:url(images/watch2.jpg);
+    --bg-3:url(images/watch3.jpg);
+    --bg-4:url(images/watch4.jpg);
+    --bg-5:url(images/watch5.jpg);
+    --bg-6:url(images/watch6.jpg);
+    --bg-7:url(images/watch7.jpg);
+    --bg-8:url(images/watch8.jpg);
+    --bg-9:url(images/watch9.jpg);
+    --bg-10:url(images/watch10.jpg);
+}
+.work div{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 14em;
+    height: 20em;
+    border-radius: .4em;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    transition-delay: 1.5s;
+    transition:all .5s;
+    z-index: 10;
+}
+.work div::before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: .4em;
+    transform: scale(0);
+    transition: all .5s;
+}
+.work div:hover::before{
+    transition: all .5s;
+transform: scale(1)
+
+}
+.work div p{
+    position: absolute;
+    color: rgb(180, 178, 178);
+    font-size: 2em;
+    z-index: 5;
+    transition: all .5s;
+    opacity: 1;
+    text-transform: uppercase;
+    line-height:1em;
+}
+.work div:hover p{
+    color: #fff;
+    text-shadow: 0px 0px 20px rgb(255, 0, 166);
+    font-weight: 500;
+    transform: translate(0,3em);
+    transition: all .5s;
+}
+.work div:active{
+    opacity: 1;
+    transition: all .5s;
+}
+.work div:active::before{
+    transform: scale(0);
+    transition: all .5s;
+}
+.work div:active p{
+    opacity: 0;
+    transition: all .5s;
+}
+ 
+video{
+    position:fixed;
+    right: 0;
+    bottom: 0;
+   min-width: 100%;
+    min-height: 100%;
+    z-index: -100;
+}
+.shop{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    min-height: 40em;
+    background-color: rgb(245, 245, 245);
+}
+form{
+    position:absolute;
+    right: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    width: 20em;
+    height: 30em;
+    border-radius: .4em;
+    background-image:linear-gradient(to top ,rgb(6, 154, 240),rgb(2, 2, 38));
+}
+input{
+width: 18em;
+height: 2.5em;
+border-radius: 30px;
+border: 2px solid rgb(255, 0, 119);
+outline: none;
+color: #fff;
+background-color: rgb(2, 2, 38);
+box-shadow: 0 0 5px rgba(0, 0, 0, .1);
+text-align: center;
+}
+::placeholder{
+    font-weight: 500;
+    text-align: center;
+    color: #fff;
+}
+select{
+    width: 18em;
+height: 2.5em;
+border-radius: 30px;
+border: 2px solid rgb(255, 0, 119);
+outline: none;
+color: #fff;
+background-color: rgb(2, 2, 38);
+box-shadow: 0 0 5px rgba(0, 0, 0, .1);
+text-align: center;
+}
+option.white{
+    background-color: #fff;
+    color: black;
+}
+option.black{
+    background-color: black;
+}
+option.brown{
+    background-color:brown;
+}
+option.darkbrown{
+    background-color:rgb(69, 31, 0);
+}
+option.gray{
+    background-color:gray;
+}
+optgroup.watch{
+    background-color: rgb(255, 0, 119);
+}
+optgroup.watch option{
+    background-color: rgb(2, 2, 38);
+}
+form h1{
+    font-size: 2em;
+    text-align: center;
+    font-weight: 500;
+    color: #fff;
+}
+form h1::first-letter{
+    font-size: 2.5em;
+    color: rgb(255, 0, 119);
+}
+form .button{
+    position: relative;
+    width: 8em;
+    height: 2.5em;
+    border-radius: 30em;
+    color: #fff;
+    background-color: rgba(255, 255,255,.1);
+    border: none;
+    border-top: .5px solid rgba(255, 255, 255, 0.751);
+    border-left:.5px solid rgba(255, 255, 255, 0.733) ;
+}
+form .button::after{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 0;
+    top: 0em;
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 30em;
+    background-color: rgb(255, 0, 119);
+    transform: scale(0,1);
+    transition: all .5s;
+}
+form .button:hover::after{
+    transform: scale(1);
+    transition: all .5s;
+}
+form .button i{
+    position: absolute;
+    right: 40%;
+    top: 10%;
+    font-size: 2em !important;
+    color: rgb(255, 255, 255);
+    z-index: 10;
+}
+.shop img{
+    position: absolute;
+    left: 0;
+    width: 40em;
+    height: auto;
+
+}
+.about{
+    display:flex;
+    justify-content:flex-end;
+    align-items: center;
+    width: 100%;
+    min-height:40em;
+    background-image: url(images/watch-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+article{
+    position: relative;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width: 50%;
+    height:100%;
+
+}
+.about div{
+    position: relative;
+    width: 25em;
+    height: 25em;
+    border-radius: .4em;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow-wrap: break-word;
+    background-color: rgba(255, 255, 255,.2);
+    border-top: .5px solid rgb(196, 196, 196);
+    border-left: .5px solid #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .1);
+}
+.about article h1{
+    position: absolute;
+    top: 0vw;
+    text-align: center;
+    font-size: 3em;
+    color: #fff;
+    font-weight: 500;
+}
+.about article h1::first-letter{
+    font-size:1.7em;
+    color: rgb(255, 0, 119);
+}
+.about article p{
+      position: absolute;
+      text-align:justify;
+      color: #fff;
+      padding: 1.5em;
+}
+.read{
+    position: absolute;
+    bottom: 2em;
+    width: 8em;
+    height: 3em;
+    border-radius:5em;
+    border: none;
+    background-color: rgb(255, 0, 119);
+    color: #fff;
+    font-size: 1em;
+transition: all .5s;
+}
+.read:hover{
+    letter-spacing: .2vw;
+    transition: all .5s;
+}
